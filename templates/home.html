@@ -27,7 +27,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center mb-4 mt-2">Jovian Carrers</h1>
+      <h1 class="text-center mb-4 mt-2">{{company_name}} Carrers</h1>
       <img
         id="banner"
         class="img-fluid"
@@ -48,13 +48,15 @@
         adipiscing tristique risus nec.
       </p>
       <h2 class="text-center mt-3 mb-3">Open Positions</h2>
-      <p>Todo - Show the jobs here</p>
-      <p>Todo - Show the jobs here</p>
-      <p>Todo - Show the jobs here</p>
-      <p>Todo - Show the jobs here</p>
-      <p>Todo - Show the jobs here</p>
-      <div class="text-center mb-3">
-        <button type="button" class="btn btn-outline-primary">Contact Us</button>
+      <div >
+        {% for job in jobs %}
+        {% include 'jobItem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center mb-2">
+        <button type="button" class="btn btn-outline-primary">
+          Contact Us
+        </button>
       </div>
       <p class="text-center">Jovian Carrers, All rights reserved 2024</p>
     </div>
