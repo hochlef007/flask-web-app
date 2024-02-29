@@ -26,6 +26,8 @@
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
+    <div class="mt-40"><h1>{{ company_name }} Carrers</h1></div>
     <div class="container">
       <h1 class="text-center mb-4 mt-2">{{company_name}} Carrers</h1>
       <img
@@ -48,11 +50,7 @@
         adipiscing tristique risus nec.
       </p>
       <h2 class="text-center mt-3 mb-3">Job Openings</h2>
-      <div >
-        {% for job in jobs %}
-        {% include 'jobItem.html' %}
-        {% endfor %}
-      </div>
+      <div>{% for job in jobs %} {% include 'jobItem.html' %} {% endfor %}</div>
       <div class="text-center mb-2">
         <button type="button" class="btn btn-outline-primary">
           Contact Us
