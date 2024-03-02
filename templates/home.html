@@ -30,33 +30,45 @@
   </head>
   <body>
     {% include 'nav.html' %}
-    <h1 class="text-center mb-4">{{ company_name }} Carrers</h1>
     <img
       id="banner"
       class="img-fluid"
-      src="../static/banner4.png"
+      src="../static/banner5.jpg"
       alt="Banner"
     />
     <div class="container">
-      <h2 class="text-center mt-3 mb-3">About Jovian</h2>
-      <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Vitae semper quis
-        lectus nulla. Eleifend mi in nulla posuere sollicitudin. Feugiat vivamus
-        at augue eget arcu dictum varius duis. Pellentesque eu tincidunt tortor
-        aliquam nulla facilisi cras fermentum odio. Ipsum a arcu cursus vitae
-        congue. Ultrices in iaculis nunc sed augue lacus viverra vitae congue.
-        Nulla facilisi cras fermentum odio eu feugiat pretium nibh ipsum. Sit
-        amet porttitor eget dolor morbi non arcu risus. At in tellus integer
-        feugiat. Facilisi nullam vehicula ipsum a. Adipiscing diam donec
-        adipiscing tristique risus nec.
-      </p>
+      <h1 class="text-center mb-3 mt-3">{{ company_name }} Carrers</h1>
+      <div class="row" style="margin: 20px 0 20px 0">
+        <div class="col-md-6">
+          <p class="lead">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae
+            semper quis lectus nulla. Eleifend mi in nulla posuere sollicitudin.
+            Feugiat vivamus at augue eget arcu dictum varius duis. Pellentesque
+            eu tincidunt tortor aliquam nulla facilisi cras fermentum odio.
+            Ipsum a arcu cursus vitae congue. Ultrices in iaculis nunc sed augue
+            lacus viverra vitae congue. Nulla facilisi cras fermentum odio eu
+            feugiat pretium nibh ipsum. Sit amet porttitor eget dolor morbi non
+            arcu risus. At in tellus integer feugiat. Facilisi nullam vehicula
+            ipsum a. Adipiscing diam donec adipiscing tristique risus nec.
+          </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+          <img
+            src="/static/people_working.jpg"
+            alt="working people"
+            style="height: 360px; border-radius: 4px"
+          />
+        </div>
+      </div>
       <h2 class="text-center mt-3 mb-3">Job Openings</h2>
       <div>{% for job in jobs %} {% include 'jobItem.html' %} {% endfor %}</div>
-      <div class="text-center mb-2">
-        <button type="button" class="btn btn-outline-primary">
-          Contact Us
-        </button>
+      <div class="text-center mt-3">
+        <a
+          class="btn btn-primary btn-lg"
+          href="mailto:company@humanressources.com?subject=Question%20about%20certain%20thing&body=Name%20%3A%20%3CEnter%20your%20name%20here%3E%0AQuestion%3A%20%3CYour%20question%20goes%20here%3E%0A"
+          >Contact</a
+        >
       </div>
       {% include 'footer.html' %}
     </div>
